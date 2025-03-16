@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Fruit Show Page</title>
+  </head>
+  <body>
+    <div class="fruit-details">
+
+    </div>
+    <h1><%= fruit.name %></h1>
+    <nav>
+        <ul>
+            <li>
+                   
+
+            </li>
+        </ul>
+    </nav>
+    <% if (fruit.isReadyToEat) { %>
+        <p>This fruit is ready to eat!</p>
+        <% } else { %>
+        <p> This fruit is not ready to eat!</p>
+       <% } %> 
+       <div class="fruit-actions">
+       <form action="/fruits/<%=fruit._id%>?_method=DELETE" method="post">
+        <button type="submit">Delete <%= fruit.name %></button>
+      </form>
+      <a href="/fruits/<%= fruit._id %>/edit">Edit <%= fruit.name %></a>
+      <a class="fruits-index-link" href="/fruits">
+        <div class="index-link-text">Back to Fruits</div>
+        </a>
+
+    </div>
+ </body>
+</html>
