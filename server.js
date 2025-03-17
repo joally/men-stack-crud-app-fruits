@@ -61,7 +61,7 @@ app.use(express.static(path.join(__dirname,'public')));
    await Fruit.create(req.body);
     //redirect tells the client to navigate to
     //a new URL path/another page
-    res.redirect('/fruits/new');// <--URL path
+    res.redirect('/fruits');// <--URL path
   })
 
 //index route for fruits- sends page that lists
